@@ -8,9 +8,9 @@ Entry for the [make.fun bounty "The Excuse That Almost Works"](https://make.fun/
 
 ## The excuse
 
-> Boss, my car died outside the game store and the tow truck is stuck behind the midnight launch queue.
+> School sent my boy home with nits. Everything he owns is in the wash, and so am I.
 
-One line, 101 characters, 19 words — a real, specific, boring detail (a dead car, a tow truck, a launch queue) rather than a wild story, written the way a person types in a hurry.
+One line, 82 characters, 18 words — a real, specific, boring detail (a kid sent home with nits, a load of laundry) rather than a wild story, written the way a person types in a hurry.
 
 ## How it works
 

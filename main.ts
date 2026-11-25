@@ -8,12 +8,13 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname } from "node:path";
 import { Buffer } from "node:buffer";
 
-// The approved excuse, word for word. A gamer's car died outside the game
-// store and the tow truck is stuck behind the midnight launch queue: a
-// boring, specific, checkable detail, not a wild story — the kind of thing
-// a tired manager has heard twice and would almost believe.
+// The approved excuse, word for word. A parent's kid sent home from
+// school with nits, and now everything the kid owns is in the wash —
+// along with the parent. A boring, specific, real-life detail with no
+// wild story and no mention of the game: the kind of thing a tired
+// manager has heard twice and would almost believe.
 const EXCUSE =
-  "Boss, my car died outside the game store and the tow truck is stuck behind the midnight launch queue.";
+  "School sent my boy home with nits. Everything he owns is in the wash, and so am I.";
 
 const OUT_PATH = "/output/entry.txt";
 
@@ -40,29 +41,31 @@ if (words.length > 20) {
 if (/[\r\n]/.test(EXCUSE)) {
   throw new Error("Excuse must be a single line with no line breaks");
 }
+if (/gta/i.test(EXCUSE)) {
+  throw new Error("Excuse must never mention the game by name");
+}
 
 // Guard the excuse against silent drift: every word must still be there,
 // in order, exactly as approved.
 const EXPECTED_WORDS = [
-  "Boss,",
+  "School",
+  "sent",
   "my",
-  "car",
-  "died",
-  "outside",
-  "the",
-  "game",
-  "store",
-  "and",
-  "the",
-  "tow",
-  "truck",
+  "boy",
+  "home",
+  "with",
+  "nits.",
+  "Everything",
+  "he",
+  "owns",
   "is",
-  "stuck",
-  "behind",
+  "in",
   "the",
-  "midnight",
-  "launch",
-  "queue.",
+  "wash,",
+  "and",
+  "so",
+  "am",
+  "I.",
 ];
 if (words.length !== EXPECTED_WORDS.length) {
   throw new Error(
